@@ -1,8 +1,39 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+@import url(https://fonts.bunny.net/css?family=inter:100,200,300,400,500,600,700,800,900|manrope:200,300,400,500,600,700,800);
+/* znci typeface brain damage */
+
+:root {
+  --background: #1c1c1c;
+  --text: #fff;
+  --font: "Inter", sans-serif;
+  --font2: "Manrope", sans-serif;
+  --font-size: 16px;
+
+  --primary: #00B7FF;
+  --primary-hover: #00A0E0;
 }
 
-a {
-  color: #00B7FF;
+body {
+  padding: 5em;
+  font-family: var(--font);
+  font-size: var(--font-size);
+  background-color: var(--background);
+  color: var(--text);
+  
+
+}
+
+#error_box {
+  border: 1px solid #FF0000;
+  background-color: #FFCCCC;
+  padding: 10px;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+footer {
+  margin-top: 10px;
+  border-top: 1px solid #CCC;
+  padding-top: 10px;
+  font-size: 11px;
+  color: #666;
 }

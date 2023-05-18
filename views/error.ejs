@@ -1,12 +1,38 @@
+<head>
+	<title>Aw, snap!</title>
+	<link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+
+
+<div id="error_box">
+
+		<h1>
+			<%= message %>
+		</h1>
+		<h2>
+			<%= error.status %>
+		</h2>
+</div>
+
 <h1>Aw, snap!</h1>
-<h2>An error occured processing your request. Error details:</h2>
-<em>Try refreshing the page. If that doesn't fix the issue, contact support.</em>
-<pre>
-	<h1>
-		<%= message %>
-	</h1>
-	<h2>
-		<%= error.status %>
-	</h2>
-	<pre><%= error.stack %></pre>
-</pre>
+<h2>An error occured processing your request.</h2>
+
+<!-- check if client 4xx error -->
+<% if (error.status >= 400 && error.status < 500) { %>
+	<p>
+		<em>You, or your browser, sent an invalid request the server cannot handle.</em>
+	</p>
+<% } else { %>
+	<p>
+		<em>Something went wrong on our end. Please try again later.</em>
+	</p>
+<% } %>
+<footer>
+	<p>
+		<%= error %><br><br>
+		<em>&copy; znci 2023 - hello@znci.dev</em>
+	</p>
+</footer>
+
+</body>
