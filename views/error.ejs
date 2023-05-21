@@ -33,6 +33,23 @@
 		<%= error %><br><br>
 		<em>&copy; znci 2023 - hello@znci.dev</em>
 	</p>
+	<div class="dropdown">
+		<span>Debug Info (hover)</span>
+		<div class="dropdown-content">
+			<ul class="menu">
+				<p>Debug Info</p>
+				<li>IP Address: <%= debug.ip %>
+				</li>
+				<li>Request URL: <%= debug.url %>
+				</li>
+				<li>Request Method: <%= debug.method %>
+				</li>
+				<li>Your Session: <%= debug.session %>
+				</li>
+				<p><%= debug.explaination %></p>
+			</ul>
+		</div>
+	</div>
 </footer>
 
 </body>
